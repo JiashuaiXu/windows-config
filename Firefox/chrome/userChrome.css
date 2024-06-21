@@ -1,0 +1,48 @@
+/* https://zhuanlan.zhihu.com/p/488501593 */
+#main-window:not([drawtitle="true"]):not([inFullscreen="true"]) 
+
+#nav-bar { 
+    margin-left : 20px;  /* leftTop drag area */
+    border-right: 140px solid var(--toolbar-bgcolor); 
+}   
+:root[sizemode="maximized"] #nav-bar { 
+    margin-top: -5px !important;   /* Top drag area */     /* jesse我把这里改的，下拉-5个像素*/
+
+    margin-left : 0px !important;  /* hidden leftTop drag area in Fullscreen mode*/
+    border-right: 140px solid var(--toolbar-bgcolor); 
+}   
+:root[privatebrowsingmode="temporary"] #nav-bar { 
+    border-right: 180px solid var(--toolbar-bgcolor) !important; 
+}
+
+/* move down to hidden titlebar */
+#titlebar {
+    margin-bottom: -31px !important;    
+}
+
+/* move down 3 button on rightTop */
+.titlebar-buttonbox-container {
+  margin-bottom: -5px !important;
+}
+:root[sizemode="maximized"] .titlebar-buttonbox-container {
+  margin-bottom: -5px !important;/* jesse我把这里改的，让那三个标签栏关闭，最小化，隐藏，落在标签上  */
+}
+
+/* move down private icon */
+.private-browsing-indicator {
+  margin-bottom: -8px !important;
+}
+:root[sizemode="maximized"] .private-browsing-indicator {
+  margin-bottom: -18px !important;
+}
+
+/* hidden horizontal tabbar on top */
+#tabbrowser-tabs[orient="horizontal"] {
+    visibility: collapse !important;
+}
+
+#sidebar-box[sidebarcommand="_0ad88674-2b41-4cfb-99e3-e206c74a0076_-sidebar-action"] 
+sidebarheader { 
+    visibility: collapse !important; 
+}
+
