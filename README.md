@@ -2,7 +2,24 @@
 
 # 搭建统一的winows 环境
 
-先安装scoop，然后安装oh-my-posh
+# 先安装最新版本的powershell
+
+```bash
+powershell -version
+```
+
+
+
+
+先安装[scoop](https://github.com/ScoopInstaller/Scoop)，然后安装oh-my-posh
+# For [Admin](https://github.com/ScoopInstaller/Install)
+# I don't care about other parameters and want a one-line command
+```
+iex "& {$(irm get.scoop.sh)} -RunAsAdmin"
+```
+
+
+
 
 ```bash
  oh-my-posh font install JetBrainsMono
