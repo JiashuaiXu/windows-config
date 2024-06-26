@@ -2,10 +2,17 @@
 
 # 搭建统一的winows 环境
 
-# 先安装最新版本的powershell
+# 先安装最新版本的[powershell](https://learn.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-5.1)
 
 ```bash
+
+winget search Microsoft.PowerShell
+
+winget install --id Microsoft.Powershell.Preview --source winget
+
 powershell -version
+
+
 ```
 
 
